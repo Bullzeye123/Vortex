@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VortexGame", "VortexGame.csproj", "{F93EA234-319B-4968-398C-E1017C9C7EB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VortexGame.Editor", "VortexGame.Editor.csproj", "{6FC39383-F126-8549-CBC4-C60876AE53F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{F93EA234-319B-4968-398C-E1017C9C7EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F93EA234-319B-4968-398C-E1017C9C7EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F93EA234-319B-4968-398C-E1017C9C7EB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC39383-F126-8549-CBC4-C60876AE53F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC39383-F126-8549-CBC4-C60876AE53F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC39383-F126-8549-CBC4-C60876AE53F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC39383-F126-8549-CBC4-C60876AE53F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
