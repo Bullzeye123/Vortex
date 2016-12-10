@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public GameObject Player;
-
     public GameObject Engine1;
     public GameObject Engine2;
     public GameObject LaneKick;
@@ -30,7 +28,6 @@ public class PlayerController : MonoBehaviour {
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            Debug.Log(engine.name);
             switch (engine.name)
             {
                 case "Engine1(Clone)":
@@ -52,6 +49,6 @@ public class PlayerController : MonoBehaviour {
 
         dst = Instantiate(obj, pose.position, pose.rotation);
         dst.tag = pose.tag;
-        dst.transform.parent = Player.transform;
+        dst.transform.parent = this.transform;
     }
 }
