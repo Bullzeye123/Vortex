@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\DestroyGameObject.cs" />
     <Compile Include="Assets\Scripts\RandomSpawn.cs" />
     <Compile Include="Assets\Scripts\Rotation.cs" />
+    <Compile Include="Assets\Scripts\Scr_Player.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
