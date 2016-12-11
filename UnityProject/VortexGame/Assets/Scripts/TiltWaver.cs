@@ -17,10 +17,19 @@ public class TiltWaver : MonoBehaviour {
 
     private Rigidbody rb;
 
+    public GameObject spawn;
+
+    private int points;
+
 	// Use this for initialization
 	void Start () {
         rb = this.GetComponent<Rigidbody>();
         performSideMotion();
+    }
+
+    void Update()
+    {
+        
     }
 
     // Update is called once per frame
@@ -54,4 +63,46 @@ public class TiltWaver : MonoBehaviour {
         transform.localRotation = Quaternion.Euler(0.0f, rb.velocity.x * -tilt, rb.velocity.x * -tilt);
     }
 
+    void OnTriggerEnter(Collider otherCollision)
+    {
+        GameObject other = otherCollision.gameObject;
+
+        if (other.tag.Equals("Border") && spawn !=null)
+        {
+            transform.position = spawn.transform.position;
+            transform.rotation = spawn.transform.rotation;
+            points--;
+        }
+
+        
+        if (other.tag.Equals("Round"))
+        {
+            points++;
+            Debug.Log(points);
+        }
+
+        if (other.tag.Equals("Obstacle"))
+        {
+            points--;
+            Destroy(other.gameObject);
+        }
+
+
+    }
+
+    void OnCOllision(Collision other)
+    {
+        GameObject gO = other.gameObject;
+
+        if (gO.tag.Equals("Obstacle"))
+        {
+            points--;
+            Destroy(other.gameObject);
+        }
+    }
+
+    void OnGui()
+    {
+        GUI.Label(new Rect(10, 10, 100, 20), "Points: "+points);
+    }
 }
