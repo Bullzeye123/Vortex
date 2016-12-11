@@ -25,7 +25,7 @@ public class RandomSpawn : MonoBehaviour
     {
         r=new Random();
 
-        tagList = new string[] {"Tree", "Box", "Car"};
+        tagList = new string[] {"Obstacle"};
 
         objectList = new GameObject[] {tree,box,car};
 
@@ -38,9 +38,9 @@ public class RandomSpawn : MonoBehaviour
         {
             int ran = randomNumber(0, 3);
             GameObject newObject = Instantiate(objectList[ran], transform.position, Quaternion.Euler(0, 0, 0));
-            newObject.tag = tagList[(int)randomNumber(0, 2)];
+            newObject.tag = tagList[0];
             spawntime = randomNumber(ran_Low, ran_High);
-            Debug.Log(spawntime);
+            //Debug.Log(spawntime);
         }
         else
         {
